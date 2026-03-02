@@ -152,7 +152,7 @@ Behance e Dribbble – Referências visuais
 
 Clone o repositório:
 
-git clone https://github.com/seu_usuario/projeto-sorriso-perfeito.git
+https://github.com/Mayy-Silv4/ConsultorioD.git
 
 Acesse a pasta:
 
