@@ -1,0 +1,1348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* MODO CLARO (PADRÃO) */
+body {
+    background-color: #ffffff;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+main {
+    padding: 40px;
+}
+
+/* BOTÃO */
+.botao-tema {
+    font-size: 18px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+}
+
+/* 🌙 MODO ESCURO */
+.dark-mode {
+    background-color: cyan;
+    color: #ffffff;
+}
+
+
+
+
+/*cor do botao*/
+
+.dark-mode .botao-tema {
+    background: #ffffff;
+    color: #000;
+}
+
+/*cor dos botoes cabeçalho*/
+/* ===================== */
+/* ✨ ANIMAÇÃO MENU */
+/* ===================== */
+
+nav a {
+    position: relative;
+    background: #a8e0e3;
+    padding: 10px 25px;
+    border-radius: 30px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+nav a:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+
+nav a:hover::before {
+    left: 100%;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #1e208a;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 60%;
+}
+
+.dark-mode nav a {
+    background: #2a2a2a;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(to right, #16b3bd, #59c5c8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+
+/* HERO */
+.hero {
+    background: #59c5c8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 60px;
+    position: relative;
+}
+/**/
+.hero {
+  position: relative;
+}
+.hero-text h2 {
+    font-size: 40px;
+}
+
+.hero-text span {
+    color: #ffb84d;
+}
+
+.hero-text p {
+    margin: 20px 0;
+}
+
+.hero button {
+    background: #ffb84d;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 40px;
+    font-size: 18px;
+}
+
+.hero-img img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+} 
+/* ===================== */
+/* 🌤️ SEÇÃO CLIMA (AJUSTADA) */
+/* ===================== */
+
+.clima-section {
+  background: transparent; /* remove o fundo */
+  padding: 20px 60px;
+  margin-top: 30px;
+}
+
+.clima-container {
+  display: flex;
+  justify-content: center; /* centraliza tudo */
+  align-items: center;
+  gap: 40px;
+  background: linear-gradient(to right, #a8e0e3, #59c5c8);
+  padding: 20px 40px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto; /* centraliza na tela */
+}
+
+
+.clima-section {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.clima-container {
+  margin-left: 0;
+}
+.clima-texto h3 {
+  font-size: 20px; /* menor */
+  margin-bottom: 5px;
+}
+
+.clima-texto p {
+  font-size: 14px; /* menor */
+}
+
+.clima-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px 18px; /* menor */
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.clima-box input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 15px;
+  width: 150px; /* menor */
+  font-size: 14px;
+}
+
+.btn-clima {
+  background: #ffb84d;
+  border: none;
+  padding: 8px 14px; /* menor */
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-clima:hover {
+  background: #ffa726;
+  transform: scale(1.05);
+}
+
+.resultado-clima {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===================== */
+/* 🌙 DARK MODE - CLIMA */
+/* ===================== */
+
+.dark-mode .clima-container {
+  background: linear-gradient(to right, #1f1f1f, #2a2a2a);
+}
+
+.dark-mode .clima-box {
+  background: #2a2a2a;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.dark-mode .clima-box input {
+  background: #3a3a3a;
+  color: white;
+}
+
+.dark-mode .clima-box input::placeholder {
+  color: #ccc;
+}
+
+.dark-mode .resultado-clima {
+  color: #ffffff;
+}
+
+
+/* SOBRE */
+.sobre {
+    background: white;
+    padding: 60px;
+}
+
+.sobre h2 {
+    background: #a8e0e3;
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 30px;
+}
+
+.box-sobre {
+    background: #87cfd4;
+    padding: 40px;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+/* SERVIÇOS */
+.servicos {
+    background: #ffd582;
+    padding: 60px;
+    text-align: center;
+}
+
+/* CONTAINER DOS CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    /* centraliza */
+    gap: 40px;
+    /* espaço igual entre eles */
+    margin-top: 40px;
+    flex-wrap: wrap;
+    /* quebra linha se precisar */
+}
+
+/* CARD PADRÃO */
+.card {
+    width: 220px;
+    /* todos do mesmo tamanho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* IMAGENS IGUAIS */
+.card img {
+    width: 120px;
+    height: 120px;
+    /* força altura igual */
+    object-fit: contain;
+    /* mantém proporção */
+}
+
+/* TEXTO IGUAL */
+.card p {
+    background: #ddd;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 15px;
+    width: 100%;
+    min-height: 60px;
+    /* força mesma altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* DESCRIÇÃO GERAL */
+.descricao-servicos {
+    background: #f4c77e;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+/* AUMENTAR APENAS AS DUAS ÚLTIMAS IMAGENS */
+.card:nth-child(3) img,
+.card:nth-child(4) img {
+    width: 200px;
+    height: 200px;
+}
+
+.card img {
+    width: 120px;
+    height: 200px;
+    /* iguala a altura das maiores */
+    object-fit: contain;
+    display: block;
+}
+
+
+/* GALERIA */
+.galeria {
+    padding: 60px;
+    background: #f4f4f4;
+}
+
+.titulo-galeria {
+    background: #a8e0e3;
+    padding: 20px;
+    border-radius: 30px;
+    width: 300px;
+}
+
+.texto-galeria {
+    background: #ddd;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px 0;
+}
+
+.fotos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #d6a542;
+}
+
+.foto p {
+    background: #ddd;
+    border-radius: 20px;
+    padding: 8px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* DEPOIMENTOS */
+.depoimentos {
+    background: #59c5c8;
+    padding: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-depoimento {
+    background: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+/* IMAGEM DO DEPOIMENTO */
+.foto-depoimento {
+    width: 60px;
+    /* menor */
+    height: 60px;
+    /* menor */
+    border-radius: 50%;
+    /* totalmente redonda */
+    object-fit: cover;
+    /* mantém proporção */
+    margin-bottom: 15px;
+    /* espaço entre foto e texto */
+}
+
+/* ===================== */
+/* ✨ EFEITO DEPOIMENTOS */
+/* ===================== */
+
+.card-depoimento {
+  background: white;
+  padding: 30px;
+  width: 250px;
+  border-radius: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+/* efeito ao passar o mouse */
+.card-depoimento:hover {
+  transform: perspective(1000px) rotateY(8deg) translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card-depoimento::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.card-depoimento:hover::before {
+  left: 100%;
+}
+
+.card-depoimento {
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes subirSuave {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-depoimento {
+  opacity: 0;
+  animation: subirSuave 0.8s ease forwards;
+}
+
+/* atraso para efeito cascata */
+.card-depoimento:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card-depoimento:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.card-depoimento:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.dark-mode .card-depoimento {
+  background: #2a2a2a;
+}
+
+/*CONTATO ANIMAÇÕES*/
+
+
+@keyframes flutuarSuave {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* aplicar no formulário */
+.contato-form {
+  animation: flutuarSuave 5s ease-in-out infinite;
+}
+
+/* aplicar também no lado esquerdo */
+.contato-info {
+  animation: flutuarSuave 5s ease-in-out infinite;
+  animation-delay: 1s; /* cria movimento alternado */
+}
+
+
+
+@keyframes contatoEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.contato-container {
+  animation: contatoEntrada 1.2s ease forwards;
+}
+
+.formContato,
+.contato-texto {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.formContato:hover,
+.contato-texto:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+
+
+.dark-mode .formContato:hover,
+.dark-mode .contato-texto:hover {
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+/*ANIMAÇÃO NO FOOTER*/
+
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+/* brilho animado */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(87,196,198,0.3) 0%, transparent 60%);
+  animation: brilhoFooter 8s linear infinite;
+}
+
+@keyframes brilhoFooter {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@keyframes pulsarLogo {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.logo-footer {
+  animation: pulsarLogo 4s ease-in-out infinite;
+}
+
+.footer-section {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.footer-section:hover {
+  transform: translateY(-10px);
+}
+
+.footer-bottom {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #57c4c6, #ffb84d);
+  animation: linhaAnimada 4s linear infinite;
+}
+
+@keyframes linhaAnimada {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* FOOTER */
+
+
+.footer {
+    background: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Georgia', serif;
+}
+
+.footer-left {
+    background: #57c4c6;
+    width: 250px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo-footer {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.footer-left h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.footer-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.footer-section p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer-section i {
+    margin-right: 10px;
+}
+
+/* letras do footer*/
+.footer-section a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #57c4c6;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    background: #eaeaea;
+}
+
+/* CONTATO */
+.contato {
+    background: #f4f4f4;
+    padding: 100px 80px;
+}
+
+.contato-container {
+    display: flex;
+    align-items: flex-start;
+    /* alinhamento pelo topo */
+    justify-content: space-between;
+    gap: 100px;
+}
+
+/* LADO ESQUERDO */
+.contato-info {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-info h2 {
+    background: #a8e0e3;
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+.contato-texto {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.contato-texto p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.linha-destaque {
+    height: 4px;
+    width: 70px;
+    background: #59c5c8;
+    margin: 18px 0;
+    border-radius: 10px;
+}
+
+.contato-texto .retorno {
+    font-weight: bold;
+    color: #16b3bd;
+}
+
+/* LADO DIREITO - FORMULÁRIO SOZINHO */
+.formContato {
+    width: 45%;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.formContato input {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.formContato button {
+    background: #ffb84d;
+    border: none;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formContato button:hover {
+    background: #ffa726;
+    transform: scale(1.05);
+}
+
+
+/* ===================== */
+/* 🌙 DARK MODE - CONTATO */
+/* ===================== */
+
+.dark-mode .contato-texto,
+.dark-mode .formContato {
+    background: #2a2a2a;
+    color: white;
+}
+
+.dark-mode .formContato input {
+    background: #3a3a3a;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .formContato input::placeholder {
+    color: #bbb;
+}
+
+.dark-mode .contato-texto .retorno {
+    color: #59c5c8;
+}
+
+/* HEADER */
+.dark-mode header {
+    background: linear-gradient(to right, #0d6f75, #156c70);
+}
+
+/* HERO */
+.dark-mode .hero {
+    background: #1a1a1a;
+}
+
+/* SOBRE */
+.dark-mode .sobre {
+    background: #1a1a1a;
+}
+
+.dark-mode .box-sobre {
+    background: #2a2a2a;
+}
+
+/* SERVIÇOS */
+.dark-mode .servicos {
+    background: #1a1a1a;
+}
+
+.dark-mode .card p {
+    background: #3a3a3a;
+}
+
+/* DESCRIÇÃO */
+.dark-mode .descricao-servicos {
+    background: #3a3a3a;
+}
+
+/* GALERIA */
+.dark-mode .galeria {
+    background: #1a1a1a;
+}
+
+.dark-mode .texto-galeria {
+    background: #2a2a2a;
+}
+
+.dark-mode .foto p {
+    background: #3a3a3a;
+}
+
+/* DEPOIMENTOS */
+.dark-mode .depoimentos {
+    background: #1a1a1a;
+}
+
+.dark-mode .card-depoimento {
+    background: #2a2a2a;
+}
+
+/* CONTATO */
+.dark-mode .contato {
+    background: #1a1a1a;
+}
+
+.dark-mode .contato-texto,
+.dark-mode .contato-form {
+    background: #2a2a2a;
+}
+
+/* FOOTER */
+.dark-mode .footer {
+    background: #1a1a1a;
+}
+
+.dark-mode .footer-bottom {
+    background: #111;
+}
+
+/* responsivo*/
+
+/*notebook*/
+@media (max-width: 1280px) {
+
+  header {
+    padding: 20px 40px;
+  }
+
+  .hero {
+    padding: 60px 40px;
+  }
+
+  .contato {
+    padding: 80px 40px;
+  }
+
+}
+/*tablets*/
+@media (max-width: 1024px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-img img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .sobre,
+  .servicos,
+  .galeria,
+  .depoimentos,
+  .contato {
+    padding: 60px 40px;
+  }
+
+  .contato-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .contato-info,
+  .contato-form {
+    width: 100%;
+  }
+
+  .depoimentos {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+}
+
+/*celular grande*/
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .fotos {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .depoimentos {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+  }
+
+  .contato {
+    padding: 60px 20px;
+  }
+
+} 
+/*celular pequeno*/
+@media (max-width: 480px) {
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .hero button {
+    width: 100%;
+  }
+
+  .contato-form {
+    padding: 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-left {
+    width: 100%;
+  }
+
+}
+
+/*Animação de entrada*/
+
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animar {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+/*hero animado*/
+
+.hero-text {
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-img {
+  animation: fadeUp 1.3s ease forwards;
+}
+
+
+
+/*animação nos cards de serviço*/
+
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/*galeria*/
+
+.foto img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.foto img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/*botoes modernos*/
+
+.hero button,
+.contato-form button {
+  transition: all 0.3s ease;
+}
+
+.hero button:hover,
+.contato-form button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/*BOTÂO AGENDAR*/
+
+.btn-agendar {
+  display: inline-block;
+  background: #ffb84d;
+  padding: 15px 40px;
+  border-radius: 40px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-agendar:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===================== */
+/* 🎨 ELEMENTOS DECORATIVOS */
+/* ===================== */
+
+.decor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 🦷 Dentinho com lupa — menor e ao lado do botão */
+.area-botao {
+  position: relative;
+  display: inline-block;
+}
+
+.dentepesquisa {
+  position: absolute;
+  width: 60px;     /* menor */
+  right: -30px;    /* direita do botão */
+  bottom: -10px;   /* embaixo do botão */
+}
+
+/* 🐝 Abelhinha (parte superior direita do hero) */
+.abelha {
+  top: 140px;
+  right: 260px;
+  width: 70px;
+}
+
+/* 🌸 Florzinha — subir um pouco */
+.florzinha {
+  bottom: 70px;  /* subiu */
+  right: 60px;
+  width: 100px;
+}
+
+/* ☁️ Nuvem — afastar da abelha e descer um pouco */
+.nuvem {
+  top: 130px;    /* desceu um pouco */
+  right: 60px;   /* afastou da abelha */
+  width: 140px;
+}
+
+/* ===================== */
+/* 🌈 ARCO-ÍRIS REAL ATRÁS DO TEXTO */
+/* ===================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arco-íris */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 1100px;
+  height: 1100px;
+  left: -100px;
+  top: 200px; /* altura alinhada com "CUIDAMOS DO SORRISO" */
+  border-radius: 50%;
+  z-index: 0;
+
+  background: radial-gradient(circle at center,
+    transparent 300px,
+    red 300px 330px,
+    orange 330px 360px,
+    yellow 360px 390px,
+    green 390px 420px,
+    blue 420px 450px,
+    indigo 450px 480px,
+    violet 480px 510px,
+    transparent 510px
+  );
+
+  opacity: 0.25;
+}
+
+/* Texto sempre na frente */
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.imagem-dentinho img {
+    width: 100px; /* tamanho do dentinho */
+    max-width: 100%;
+    float: right; /* mantém à direita */
+    margin-left: 5px; /* espaço entre texto e imagem */
+    margin-top: -80px; /* sobe a imagem acima do texto */
+    animation: flutuar 3s ease-in-out infinite alternate; /* animação leve */
+}
+
+/* ===================== */
+/* 🌈 ARCO-ÍRIS REAL ATRÁS DOS DEPOIMENTOS */
+/* ===================== */
+
+.depoimentos {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arco-íris igual ao da hero */
+.depoimentos::before {
+  content: "";
+  position: absolute;
+  width: 1100px;
+  height: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px; /* ajuste fino da altura */
+  border-radius: 50%;
+  z-index: 0;
+
+  background: radial-gradient(circle at center,
+    transparent 300px,
+    red 300px 330px,
+    orange 330px 360px,
+    yellow 360px 390px,
+    green 390px 420px,
+    blue 420px 450px,
+    indigo 450px 480px,
+    violet 480px 510px,
+    transparent 510px
+  );
+
+  opacity: 0.25;
+}
+
+/* Mantém os cards na frente */
+.card-depoimento {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================== */
+/* 🐝 ABELHINHA NOS DEPOIMENTOS */
+/* ===================== */
+
+.depoimentos {
+  position: relative; /* garante posicionamento */
+}
+
+/* Abelhinha no canto superior direito */
+.depoimentos::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 80px;
+  height: 80px;
+  background: url("img/abelha.png") no-repeat center;
+  background-size: contain;
+  z-index: 2;
+
+  animation: voarSuave 4s ease-in-out infinite;
+}
+
+/* Animação de voo suave */
+@keyframes voarSuave {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* ===================== */
+/* 🌸🌸 DUAS FLORZINHAS NOS DEPOIMENTOS */
+/* ===================== */
+
+.depoimentos {
+  position: relative;
+
+  background-image: 
+    url("img/florzinha.png"),
+    url("img/florzinha.png");
+
+  background-repeat: no-repeat, no-repeat;
+
+  background-position: 
+    bottom -10px right 40px,   /* primeira flor */
+    bottom -10px right 80px;  /* segunda flor ao lado */
+
+  background-size: 
+    100px,
+    80px; /* pode deixar tamanhos diferentes */
+}
+
+/* ===================== */
+/* ☀️ SOL NA HOME */
+/* ===================== */
+
+.sol {
+  position: absolute;
+  top: 120px;      /* distância do topo */
+  right: 40px;    /* distância da direita */
+  width: 60px;   /* tamanho do sol */
+  z-index: 1;
+
+  animation: girarSol 20s linear infinite;
+}
+
+/* Animação de rotação suave */
+@keyframes girarSol {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

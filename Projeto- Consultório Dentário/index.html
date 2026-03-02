@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Clínica Odontológica Infantil</title>
+    <link rel="stylesheet" href="style.css">
+      <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#57c6c6">
+</head>
+
+<!-- ELEMENTOS DECORATIVOS -->
+
+
+<img src="img/sol.png" class="decor sol">
+<img src="img/abelha.png" class="decor abelha">
+<img src="img/florzinha.png" class="decor florzinha">
+<img src="img/nuvem.png" class="decor nuvem">
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo-area">
+        <img src="img/logo.jpeg" class="logo">
+        <div>
+            <h1>CLÍNICA</h1>
+            <span>ODONTOLÓGICA</span>
+        </div>
+    </div>
+    
+ 
+    <nav>
+      <a href="#hero">home</a>
+      <a href="#servicos">servicos</a>
+      <a href="#galeria">galeria</a>
+      <a href="#depoimentos">depoimentos</a>
+      <a href="#contato">contato</a>
+      <a href="#footer">footer</a>
+      <button id="toggleTema" class="botao-tema">
+      🌙
+    </button>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-text">
+        <h2>CUIDAMOS DO SORRISO <br> DOS PEQUENOS <span>COM CARINHO!</span></h2>
+        <p>Atendimento acolhedor e especializado para crianças,
+        garantindo conforto e diversão.</p>
+
+       <!-- FAIXA CLIMA -->
+<section class="clima-section">
+
+  <div class="clima-container">
+
+    <div class="clima-texto">
+      <h3>🌤️ Como está o tempo hoje?</h3>
+      <p>Confira a previsão antes de sair de casa.</p>
+    </div>
+
+    <div class="clima-box">
+      <input type="text" id="cidadeInput" placeholder="Digite sua cidade">
+      <button onclick="buscarClima()" class="btn-clima">
+        Ver previsão
+      </button>
+
+      <div class="resultado-clima">
+        <p id="temperatura"></p>
+        <p id="descricao"></p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+        <div class="area-botao">
+  <a href="#contato" class="btn-agendar">AGENDAR CONSULTA</a>
+  <img src="img/dentepesquisa.png" class="dentepesquisa decor">
+</div>
+    </div>
+
+    <div class="hero-img">
+        <img src="img/dentista.jpeg">
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre">
+    <h2>SOBRE NOSSA CLÍNICA</h2>
+
+    <div class="box-sobre">
+        <p>
+           Nossa Clínica Odontológica Infantil é especializada no atendimento de bebês, 
+           crianças e adolescentes, oferecendo cuidados completos em saúde bucal com foco em 
+           prevenção, diagnóstico precoce e tratamentos minimamente invasivos. Atuamos com 
+           abordagem humanizada, ambiente acolhedor e técnicas específicas de manejo comportamental,
+            garantindo segurança, conforto e experiências positivas para os pequenos, 
+            sempre com acompanhamento atento ao crescimento e desenvolvimento saudável do 
+            sorriso infantil.
+        </p>
+    </div>
+
+    <!-- Adicionando a imagem do dentinho -->
+    <div class="imagem-dentinho">
+        <img src="img/dentinhosecuidando.png" alt="Dentinho se cuidando">
+    </div>
+
+</section>
+<!-- SERVIÇOS -->
+<section class="servicos " id="servicos">
+    <h2>Nossos Serviços</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="img/denteescova.png">
+            <p>Recuperação do sorriso</p>
+        </div>
+
+        <div class="card">
+            <img src="img/dentecomcarie.png">
+            <p>Restauração de cárie</p>
+        </div>
+
+        <div class="card">
+            <img src="img/aparelhodente.png">
+            <p>Aparelho dentário infantil</p>
+        </div>
+
+        <div class="card">
+            <img src="img/dentinhos.png">
+            <p>Educação e orientação</p>
+        </div>
+    </div>
+
+    <div class="descricao-servicos">
+        <p>
+            Além do atendimento clínico tradicional, nossa clínica odontológica infantil 
+            oferece diversos serviços pensados especialmente para o cuidado completo dos pequenos.
+            Realizamos prevenção e aplicação de flúor, tratamento de cáries, selantes dentários,
+            acompanhamento do crescimento dental e ortodontia infantil.
+            Também orientamos pais e crianças sobre higiene bucal e hábitos saudáveis, 
+            sempre de forma lúdica e acolhedora. Nosso objetivo é garantir saúde, 
+            conforto e um sorriso feliz em cada fase da infância. 
+        </p>
+    </div>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria" id="galeria">
+    <div class="titulo-galeria">
+        <h2>Galeria de sorrisos</h2>
+    </div>
+
+    <div class="texto-galeria">
+        <p>
+            Na Clínica Sorriso Perfeito, acreditamos que cada sorriso conta uma história de transformação, autoestima e bem-estar.
+Nesta galeria, você pode conferir alguns resultados de pacientes que confiaram em nosso trabalho e hoje exibem sorrisos mais saudáveis, harmoniosos e cheios de confiança.
+Cada imagem representa dedicação, cuidado e compromisso com a excelência em cada tratamento realizado.
+Todas as fotos foram divulgadas com autorização dos pacientes, respeitando a ética e a privacidade de cada um.
+Seu novo sorriso pode ser o próximo a fazer parte da nossa história.
+        </p>
+    </div>
+
+    <div class="fotos">
+        <div class="foto">
+            <img src="img/criança4.jpeg">
+            <p>Restauração de cárie</p>
+        </div>
+
+        <div class="foto">
+            <img src="img/criança3.jpeg">
+            <p>Reconstrução dentária</p>
+        </div>
+
+        <div class="foto">
+            <img src="img/criança2.jpeg">
+            <p>Tratamento restaurador</p>
+        </div>
+
+        <div class="foto">
+            <img src="img/dente.jpeg">
+            <p>Recuperação do sorriso</p>
+        </div>
+
+        <div class="foto">
+            <img src="img/criança1.jpeg">
+            <p>Odontopediatria preventiva</p>
+        </div>
+    </div>
+</section>
+
+<section class="depoimentos" id="depoimentos">
+
+    <div class="card-depoimento">
+        <img src="img/mae2.jpeg" class="foto-depoimento">
+        <div class="texto-depoimento">
+            ⭐⭐⭐
+            <p>
+                Levei meu filho e fiquei impressionada com o atendimento
+                carinhoso e acolhedor da dentista.
+            </p>
+        </div>
+    </div>
+
+    <div class="card-depoimento">
+        <img src="img/pai.jpeg" class="foto-depoimento">
+        <div class="texto-depoimento">
+            ⭐⭐⭐
+            <p>
+                Minha filha adora ir à Sorriso Perfeito!
+                Recomendo muito!
+            </p>
+        </div>
+    </div>
+
+    <div class="card-depoimento">
+        <img src="img/mae1.jpeg" class="foto-depoimento">
+        <div class="texto-depoimento">
+            ⭐⭐⭐
+            <p>
+                Muito satisfeita com os cuidados que meu filho recebeu.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+
+    <div class="contato-container">
+
+        <!-- LADO ESQUERDO -->
+        <div class="contato-info">
+
+            <h2>Entre em Contato</h2>
+
+            <div class="contato-texto">
+                <p>
+                    📅 <strong>Agendamentos</strong><br>
+                    🦷 Informações sobre <strong>tratamentos</strong><br>
+                    💬 Demais solicitações
+                </p>
+
+                <div class="linha-destaque"></div>
+
+                <p class="retorno">
+                    Preencha o formulário ao lado e nossa equipe retornará
+                    seu contato em breve 💙
+                </p>
+            </div>
+        </div>
+
+        <!-- ÚNICO FORMULÁRIO -->
+      <form id="formContato" class="formContato">
+
+  <input type="text" id="nome" placeholder="Nome" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="text" id="cep" placeholder="CEP" required>
+  <input type="text" id="rua" placeholder="Rua">
+  <input type="text" id="bairro" placeholder="Bairro">
+  <input type="text" id="cidade" placeholder="Cidade">
+
+  <button type="submit">Enviar</button>
+
+</form>
+        
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+
+  <div class="footer-left">
+    <img src="img/logo.jpeg" class="logo-footer">
+    <h2>Sorriso<br>Perfeito</h2>
+  </div>
+
+  <div class="footer-content">
+
+    <div class="footer-section">
+      <h3><i class="fa-regular fa-address-book"></i> Contatos</h3>
+
+      <p><i class="fa-regular fa-envelope"></i> contato@clinicasorrisoperfeito.com</p>
+
+      <p>
+        <a href="https://wa.me/5551993304409" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> 51993304409
+        </a>
+      </p>
+
+      <p><i class="fa-solid fa-location-dot"></i> Centro - Sapucaia do Sul/RS</p>
+    </div>
+
+    <div class="footer-section">
+      <h3><i class="fa-solid fa-globe"></i> Redes Sociais</h3>
+
+     <p>
+  <a href="https://www.instagram.com/clinica.sorriso.perfeito/" target="_blank">
+    <i class="fa-brands fa-instagram"></i> @clinicasorrisoperfeito
+  </a>
+</p>
+
+      <p>
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-facebook"></i> Clínica Sorriso Perfeito
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Clínica Sorriso Perfeito - Todos os Direitos Reservados.
+  </div>
+
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>
