@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>Clínica Odontológica Infantil</title>
     <link rel="stylesheet" href="style.css">
-      <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#57c6c6">
+      <link rel="manifest" href="/manifest.json" />
 </head>
 
 <!-- ELEMENTOS DECORATIVOS -->
@@ -321,5 +320,19 @@ Seu novo sorriso pode ser o próximo a fazer parte da nossa história.
 </footer>
 <script src="script.js"></script>
 </body>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+          console.log('Service Worker registrado com sucesso:', registration);
+        })
+        .catch((error) => {
+          console.log('Falha ao registrar o Service Worker:', error);
+        });
+    });
+  }
+</script>
 
 </html>
